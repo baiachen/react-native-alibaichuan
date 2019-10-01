@@ -1,0 +1,67 @@
+
+buildscript {
+    repositories {
+        jcenter()
+    }
+
+    dependencies {
+        classpath 'com.android.tools.build:gradle:2.3.3'
+    }
+}
+
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion 28
+    buildToolsVersion "28.0.3"
+    useLibrary 'org.apache.http.legacy'
+
+    defaultConfig {
+        minSdkVersion 16
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+    }
+    lintOptions {
+        abortOnError false
+    }
+
+    buildTypes {
+        debug {
+            resValue "id", "webviewload_monitor_cancel_point",""
+        }
+        release {
+            resValue "id", "webviewload_monitor_cancel_point",""
+        }
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'com.facebook.react:react-native:+'
+
+    //登陆
+    implementation 'com.ali.auth.sdk:alibabauth_core:2.0.0.6@aar'
+    implementation 'com.ali.auth.sdk:alibabauth_ui:2.0.0.6@aar'
+    implementation 'com.ali.auth.sdk:alibabauth_ext:2.0.0.6@aar'
+    //安全组件
+    implementation 'com.taobao.android:securityguardaar3:5.4.171@aar'
+    implementation 'com.taobao.android:securitybodyaar3:5.4.99@aar'
+    implementation 'com.taobao.android:avmpaar3:5.4.36@aar'
+    implementation 'com.taobao.android:sgmiddletieraar3:5.4.9@aar'
+    //Mtop
+    implementation 'com.taobao.android:mtopsdk_allinone_open:3.1.2.5@jar'
+    //applink
+    implementation 'com.alibaba.sdk.android:alibc_link_partner:4.1.11@aar'
+    //ut
+    implementation 'com.taobao.android:utdid4all:1.1.5.3_proguard'
+    implementation 'com.alibaba.mtl:app-monitor-sdk:2.6.4.5_for_bc'
+    // 电商基础组件
+    implementation 'com.alibaba.sdk.android:AlibcTradeCommon:4.0.0.2@aar'
+    implementation 'com.alibaba.sdk.android:AlibcTradeBiz:4.0.0.2@aar'
+    implementation 'com.alibaba.sdk.android:nb_trade:4.0.0.2@aar'
+    implementation 'com.alibaba:fastjson:1.2.41'
+}
