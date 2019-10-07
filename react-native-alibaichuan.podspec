@@ -5,14 +5,14 @@ package = JSON.parse(File.read(File.join(__dir__, 'package.json')))
 Pod::Spec.new do |s|
   s.name          = package['name']
   s.version       = package['version']
-  s.summary       = package['description']
+  s.summary        = "alibaichuan"
+  s.homepage       = "https://github.com/baiachen/react-native-alibaichuan"
   s.description   = package['description']
-  s.homepage      = package['homepage']
   s.license       = package['license']
   s.author        = package['author']
   s.platform      = :ios, "9.0"
-  s.source        = { :git => "https://github.com/bashen1/react-native-mbaichuan.git", :tag => "master" }
-  s.source_files  = "ios/BCBridge.{h,m}", "ios/BCWebManager.{h,m}", "ios/BCWebView.{h,m}", "ios/RNReactNativeMbaichuan.{h,m}"
+  s.source        = { :git => "https://github.com/baiachen/react-native-alibaichuan.git", :tag => "master" }
+  s.source_files  = "ios/BCBridge.{h,m}", "ios/BCWebManager.{h,m}", "ios/BCWebView.{h,m}", "ios/RNAlibcSdk.{h,m}"
   s.requires_arc  = true
   s.resources = "ios/BaichuanSDK/Resources/*", "ios/BaichuanSDK/mtopsdk_configuration.plist"
   s.vendored_frameworks = "ios/BaichuanSDK/Frameworks/*"

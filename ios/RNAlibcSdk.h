@@ -5,7 +5,7 @@
 #import <React/RCTBridgeModule.h>
 #endif
 
-@interface RNReactNativeMbaichuan : NSObject <RCTBridgeModule>
+@interface RNAlibcSdk : NSObject <RCTBridgeModule>
 
 @end
   

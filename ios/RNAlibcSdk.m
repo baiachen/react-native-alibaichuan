@@ -1,11 +1,11 @@
 
-#import "RNReactNativeMbaichuan.h"
+#import "RNAlibcSdk.h"
 #import "BCBridge.h"
 #import <AlibabaAuthSDK/ALBBSDK.h>
 #import <AlibcTradeBiz/AlibcTradeBiz.h>
 #import <AlibcTradeSDK/AlibcTradeSDK.h>
 
-@implementation RNReactNativeMbaichuan {
+@implementation RNAlibcSdk {
     bool hasListeners;
 }
 

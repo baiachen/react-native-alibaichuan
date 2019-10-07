@@ -28,8 +28,8 @@
 }
 - (void)initSDK: (NSDictionary *)param resolve: (RCTPromiseResolveBlock)resolve
 {
-    NSString* isvVersion = @"4.0.0";
-    NSString* isvAppName = @"mbaichuan";
+    NSString* isvVersion = @"4.0.0.2";
+    NSString* isvAppName = @"alibaichuan";
     if (param[@"isvVersion"]!=nil) {
         isvVersion = param[@"isvVersion"];
     }
