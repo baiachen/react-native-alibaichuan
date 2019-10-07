@@ -82,4 +82,5 @@ const NativeComponent = requireNativeComponent("AlibcTradeWebView", AlibcTradeWe
 
 const { RNAlibcSdk } = NativeModules;
 
+
 export default RNAlibcSdk;
