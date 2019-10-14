@@ -143,6 +143,40 @@ public class RNAlibcSdkModule extends ReactContextBaseJavaModule {
     }
 
     /**
+     * 退出登录---无参数传入
+     */
+    @ReactMethod
+    public void logout(final Callback successCallback, final Callback errorCallback) {
+        if (AlibcLogin.getInstance().getSession() != null
+                && AlibcLogin.getInstance().isLogin()) {
+            AlibcLogin alibcLogin = AlibcLogin.getInstance();
+
+            alibcLogin.logout(new AlibcLoginCallback() {
+                @Override
+                public void onSuccess(int i, String s, String s1) {
+                    WritableMap map = Arguments.createMap();
+                    map.putString("code", "0");
+                    map.putString("message", "success");
+                    successCallback.invoke(map);
+                }
+
+                @Override
+                public void onFailure(int i, String s) {
+                    WritableMap map = Arguments.createMap();
+                    map.putString("code", Integer.toString(i));
+                    map.putString("message", s);
+                    errorCallback.invoke(map);
+                }
+            });
+        } else {
+            WritableMap map = Arguments.createMap();
+            map.putString("code", "90000");
+            map.putString("message", "Not logged in");
+            errorCallback.invoke(map);
+        }
+    }
+
+    /**
      * 展示
      */
     @ReactMethod
