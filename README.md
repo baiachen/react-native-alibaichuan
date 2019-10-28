@@ -7,6 +7,12 @@
 方便在RN应用中集成阿里百川SDK的各种功能。正在积极开发和完善， 如果觉得有用请给个Star。
 
 
+```sh
+yarn add react-native-alibaichuanupdate
+or
+npm i react-native-alibaichuanupdate
+```
+
 # 功能
 
 1. 淘宝登录授权
